@@ -5,7 +5,6 @@ V_dish;
 V_clean;
 V_garden;
 V_toilet;
-eff_water;
 dish_method;
 dish_type;
 V_load;
@@ -47,7 +46,6 @@ V_other = 163.45;
 LUT_dishwasher[] = "handwash", "dishwasher"; //handwash, dishwasher
 LUT_irri[] = "drip", "non-drip"; //Drip, non-drip
 LUT_houseType = 0, 1, 2, 4, 8; //Apartment, Townhouse, Single Family, Large Home, Acreage
-LUT_effP = 1, 0.9, 0.8 //None, Program A, Program B
 
 
 //User Prompts and related logic
@@ -96,9 +94,6 @@ dwell_type = LUT_houseType[USERSELECTION];
 "Do you have a water efficient toilet, i.e. low flow or dual flush?"
 toilet_method = USERSELECTION; //yes or no.
 
-//Q12
-"What water efficiency program would you implement to reduce the amount of raw water that is treated for municipal use?"
-eff_water = LUT_effP[USERSELECTION];
 
 //Output logic
 
@@ -158,6 +153,6 @@ V_toilet = C_toilet * f_flush;
 
 //All activities
 
-V_percap = (V_dish + V_clean + V_garden + V_toilet + V_other) * eff_water;
+V_percap = (V_dish + V_clean + V_garden + V_toilet + V_other);
 
 V_people = C_basin2030 * V_percap * 365 * 0.001;
