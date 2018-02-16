@@ -17,7 +17,7 @@ C_basin2030;
 //constants
 SWR_natgas = 0.74;
 SWR_coal = 1.5;
-SWR_hydro = 18.2;
+SWR_hydro = 14.5;
 SWR_nuclear = 2.15
 SWR_windsolar = 0;
 SWR_biomass = 1.19;
@@ -54,4 +54,4 @@ eff_energy = c_energy[USERSELECTION];
 //Logic for output
 
 e_total = C_basin2030 * e_cap * eff_energy;
-V_energy = eff_energy * ((SWR_natgas * p_natgas) + (SWR_coal * p_coal) + (SWR_hydro * p_hydro) + (SWR_nuclear * p_nuclear) + (SWR_windsolar * p_windsolar) + (SWR_biomass * p_biomass))
+V_energy = eff_energy * ((SWR_natgas * p_natgas) + (SWR_coal * p_coal) + (SWR_hydro * p_hydro) + (SWR_nuclear * p_nuclear) + (SWR_windsolar * p_windsolar) + (SWR_biomass * p_biomass));
